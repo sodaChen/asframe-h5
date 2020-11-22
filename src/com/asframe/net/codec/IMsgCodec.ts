@@ -1,4 +1,5 @@
-import { ByteArray } from "../bytes/ByteArray";
+import { ByteArray } from "../../bytes/ByteArray";
+
 
 /**
  * 消息的编码和解码接口

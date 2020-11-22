@@ -6,10 +6,10 @@
  * <br>Program Name:ASFrameTS
  * <br>Date:2020/10/23
  */
+import { ByteArray } from "../../bytes/ByteArray";
+import { NetUtils } from "../NetUtils";
 import { BasicMsgCodec } from "./BasicMsgCodec";
 import { IMsgCodec } from "./IMsgCodec";
-import { ByteArray } from "../bytes/ByteArray";
-import { NetUtils } from "./NetUtils";
 /**
  * 二进制数组解析器
  * @author sodaChen

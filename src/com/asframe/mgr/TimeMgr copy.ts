@@ -44,9 +44,6 @@ export class TimeMgr
 	{
 		if(this._isStart)
 			return ;
-		//30帧的频率
-		// this.timerId = setInterval(this.onEnterFrame.bind(this),33);
-		//web采用1秒钟的更新频率
 		this.timerId = setInterval(this.onEnterFrame.bind(this),runRate);
 		this._isStart = true;
 		this._initial = true;

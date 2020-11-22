@@ -7,7 +7,6 @@
  * <br>Date:2020/10/10
  */
 import { Subjects } from "../mode/observers/Subjects";
-import { IMsgCodec } from "./IMsgCodec";
 import { ITcpEventListener } from "./ITcpEventListener";
 import { CallBack } from "../fun/CallBack";
 import { IOErrorEvent } from "../events/IOErrorEvent";
@@ -18,6 +17,7 @@ import { ASFEvent } from "../events/ASFEvent";
 import { CoreNotice } from "../CoreNotice";
 import { ASFWebSocket } from '../socket/ASFWebSocket';
 import { NetErrorData } from './NetErrorData';
+import { IMsgCodec } from "./codec/IMsgCodec";
 
 
 /**

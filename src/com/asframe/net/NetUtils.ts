@@ -16,55 +16,31 @@ export class NetUtils
      */
     static writeVaryNum(bytearr: ByteArray, element: number): void
     {
-        // try
-        // {
-            if (element < 122 && element > -128)
-            {//byte
-                bytearr.writeByte(element);
-            }
-            else if (element < 128 && element > 122)
-            {//byte，主要是处理 122~127的byte
-                bytearr.writeByte(122);
-                bytearr.writeByte(element);
-            }
-            else if (element < 32768 && element > -32768)
-            {//short
-                bytearr.writeByte(123);
-                bytearr.writeShort(element);
-            }
-            else if (element < 2147483647 && element > -2147483648)
-            {//int
-                bytearr.writeByte(124);
-                bytearr.writeInt(element);
-            }
-            else
-            {//long
-                bytearr.writeByte(125);
-                bytearr.writeDouble(element);
-            }
-        // }
-        // catch (Error)
-        // {
-        //     alert(Error.stack);
-        // }
+        if (element < 122 && element > -128)
+        {//byte
+            bytearr.writeByte(element);
+        }
+        else if (element < 128 && element > 122)
+        {//byte，主要是处理 122~127的byte
+            bytearr.writeByte(122);
+            bytearr.writeByte(element);
+        }
+        else if (element < 32768 && element > -32768)
+        {//short
+            bytearr.writeByte(123);
+            bytearr.writeShort(element);
+        }
+        else if (element < 2147483647 && element > -2147483648)
+        {//int
+            bytearr.writeByte(124);
+            bytearr.writeInt(element);
+        }
+        else
+        {//long
+            bytearr.writeByte(125);
+            bytearr.writeDouble(element);
+        }
     }
-    // if(val < 122 && val > -128){//byte
-    //     out.writeByte((byte)val);
-    // }else if(val < 128 && val > 122){//byte
-    //     out.writeByte(122);
-    //     out.writeByte((byte)val);
-    // }else if(val < 32767 && val > -32768){//short
-    //     out.writeByte(123);
-    //     out.writeShort((short)val);
-    // }else if(val < 2147483647 && val > -2147483648){//int
-    //     out.writeByte(124);
-    //     out.writeInt((int)val);
-    // }else{
-    //     out.writeByte(125);
-    //     out.writeDouble((double)val);
-    // }
-
-
 
     /**
      * 读可变的number数值
